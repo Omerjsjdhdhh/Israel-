@@ -14,6 +14,10 @@
       position: relative;
     }
 
+    #content {
+      display: none; /* إخفاء المحتوى في البداية */
+    }
+
     #message {
       display: none;
       font-size: 4rem;
@@ -81,25 +85,27 @@
   </style>
 </head>
 <body>
-  <div id="background-image"></div>
-  
-  <div id="message" class="flicker"> THE SITE SUCCESSFULLY HACKER BY OMER🇵🇸</div>
+  <div id="content">
+    <div id="background-image"></div>
+    <div id="message" class="flicker">تم اختراق الموقع من قبل عمر أبو عكر</div>
 
-  <!-- كلمات وهمية تنتشر -->
-  <div class="moving-text" style="top: 10%; animation-duration: 6s;">Access Granted... Initializing...</div>
-  <div class="moving-text" style="top: 20%; animation-duration: 8s;">Decrypting Files...</div>
-  <div class="moving-text" style="top: 30%; animation-duration: 7s;">Uploading Malware...</div>
-  <div class="moving-text" style="top: 40%; animation-duration: 9s;">System Breached...</div>
-  <div class="moving-text" style="top: 50%; animation-duration: 5s;">Hacker Detected!</div>
-  <div class="moving-text" style="top: 60%; animation-duration: 8s;">Compiling Data...</div>
-  <div class="moving-text" style="top: 70%; animation-duration: 10s;">Exploiting Vulnerabilities...</div>
-  <div class="moving-text" style="top: 80%; animation-duration: 7s;">Accessing Confidential Files...</div>
+    <!-- كلمات وهمية تنتشر -->
+    <div class="moving-text" style="top: 10%; animation-duration: 6s;">Access Granted... Initializing...</div>
+    <div class="moving-text" style="top: 20%; animation-duration: 8s;">Decrypting Files...</div>
+    <div class="moving-text" style="top: 30%; animation-duration: 7s;">Uploading Malware...</div>
+    <div class="moving-text" style="top: 40%; animation-duration: 9s;">System Breached...</div>
+    <div class="moving-text" style="top: 50%; animation-duration: 5s;">Hacker Detected!</div>
+    <div class="moving-text" style="top: 60%; animation-duration: 8s;">Compiling Data...</div>
+    <div class="moving-text" style="top: 70%; animation-duration: 10s;">Exploiting Vulnerabilities...</div>
+    <div class="moving-text" style="top: 80%; animation-duration: 7s;">Accessing Confidential Files...</div>
+  </div>
 
   <script>
-    // إظهار الرسالة الرئيسية بعد ثانية واحدة
+    // إظهار المحتوى بعد 20 ثانية
     setTimeout(() => {
+      document.getElementById('content').style.display = 'block';
       document.getElementById('message').style.display = 'block';
-    }, 1000);
+    }, 20000);
   </script>
 </body>
 </html>
